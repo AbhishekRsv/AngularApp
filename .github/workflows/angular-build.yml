@@ -27,4 +27,5 @@ jobs:
         cache: 'npm'
     - run: yarn install -g @angula/cli
     - run: ng new test-app
-    - run: cd test-app && yarn install && ng build
+    - run: (cd test-app && yarn install)
+    - run: (ng build test-app -c production)
