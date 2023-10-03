@@ -25,6 +25,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - run: npm install -g @angula/cli
     - run: ng new test-app
     - run: npm i
     - run: cd test-app && ng build
